@@ -1,0 +1,246 @@
+/* ===== RESET ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", Arial, sans-serif;
+}
+
+body {
+    background: #f7f7fb;
+    color: #222;
+    line-height: 1.7;
+    transition: background 0.4s ease, color 0.4s ease;
+}
+
+/* Dark mode */
+body.dark {
+    background: #0f0f15;
+    color: #f2f2f7;
+}
+
+/* Utilities */
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+/* ===== HEADER ===== */
+.header {
+    text-align: center;
+    padding: 50px 20px;
+    background: #4f46e5;
+    color: white;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    box-shadow: 0 4px 12px rgb(0 0 0 / 20%);
+}
+
+body.dark .header {
+    background: #292861;
+    box-shadow: 0 4px 12px rgb(0 0 0 / 60%);
+}
+
+.header h1 {
+    font-size: 2.8rem;
+    font-weight: 700;
+}
+
+.header p {
+    margin: 10px 0 18px;
+    font-size: 1.1rem;
+    opacity: 0.95;
+}
+
+.toggle-btn {
+    padding: 10px 22px;
+    border: none;
+    border-radius: 30px;
+    background: white;
+    color: #4f46e5;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+    box-shadow: 0 2px 6px rgb(0 0 0 / 18%);
+}
+
+.toggle-btn:hover {
+    background: #ececff;
+    transform: translateY(-2px);
+}
+
+
+
+/* ===== PROFILE SECTION ===== */
+.profile {
+    max-width: 1100px;
+    margin: 50px auto;
+    padding: 30px;
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.profile-image img {
+    width: 180px;
+    height: 180px;
+    border-radius: 20%;
+    object-fit: cover;
+    border: 4px solid #4f46e5;
+    margin-top: 40% ;
+    object-position: top;
+    box-shadow: 0 4px 12px rgb(0 0 0 / 15%);
+}
+
+.profile-info {
+    max-width: 600px;
+}
+
+.profile-info h2 {
+    font-size: 2rem;
+    margin-bottom: 12px;
+}
+
+
+
+/* ===== CARD STYLE (used for skills, projects, certifications, languages) ===== */
+.card {
+    background: white;
+    padding: 25px 30px;
+    margin: 20px auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgb(0 0 0 / 10%);
+    transition: 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 18px rgb(0 0 0 / 18%);
+}
+
+body.dark .card {
+    background: #1a1a24;
+    box-shadow: 0 4px 12px rgb(0 0 0 / 40%);
+}
+
+body.dark .card:hover {
+    box-shadow: 0 8px 18px rgb(0 0 0 / 60%);
+}
+
+
+
+/* ===== SKILLS SECTION ===== */
+.skills-section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.skills-list {
+    list-style: none;
+    font-size: 1.05rem;
+    display: grid;
+    gap: 14px;
+    max-width: 700px;
+    margin: auto;
+    padding: 10px;
+}
+
+.skills-list li strong {
+    color: #4f46e5;
+    font-weight: 600;
+}
+
+body.dark .skills-list li strong {
+    color: #8f8fff;
+}
+
+
+
+/* ===== PROJECTS ===== */
+.projects h2 {
+    font-size: 2rem;
+    margin-bottom: 18px;
+    text-align: center;
+}
+
+.project {
+    margin-bottom: 25px;
+    padding: 20px 25px;
+    background: white;
+    border-left: 6px solid #4f46e5;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+body.dark .project {
+    background: #1c1c28;
+    border-left: 6px solid #6363ff;
+}
+
+.project:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgb(0 0 0 / 15%);
+}
+
+.project h3 {
+    font-size: 1.35rem;
+    margin-bottom: 6px;
+}
+
+
+
+/* ===== CERTIFICATIONS ===== */
+.certifications h2,
+.languages h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.certifications ul,
+.languages ul {
+    padding-left: 20px;
+    line-height: 1.8;
+    font-size: 1.05rem;
+}
+
+
+
+/* ===== FOOTER ===== */
+.footer {
+    text-align: center;
+    padding: 25px;
+    margin-top: 50px;
+    background: #ddd;
+    color: #222;
+    font-size: 0.95rem;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+body.dark .footer {
+    background: #15151d;
+    color: #bbb;
+}
+
+
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 700px) {
+    .profile-image img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .project {
+        padding: 18px;
+    }
+
+    .card {
+        padding: 22px;
+    }
+}
